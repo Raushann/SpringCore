@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <bean class="com.springcore.auto.wire.Address" name="address">
+ <property name="street" value="Temp Street"/>
+ <property name="city" value="Delhi"/>
+ </bean>
+ 
+ 
+ <bean class="com.springcore.auto.wire.Address" name="address2">
+ <property name="street" value="Temp Street"/>
+ <property name="city" value="Delhi"/>
+ </bean>
+ 
+  <bean class="com.springcore.auto.wire.Emp" name="employee" autowire="constructor">
+  
+  <!-- 
+       Auto-wiring is by default no.
+       
+       byName is used to check the variable name
+       byType is used to check the bean in same package if more thank one bean it will give exception
+       
+       in both case they are calling setter method to inject
+       
+       
+       constructor is used to check constructor
+  
+   -->
+   
+ </bean>
+ 
+ 
+
+	
+</beans>

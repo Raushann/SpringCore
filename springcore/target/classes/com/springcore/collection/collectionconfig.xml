@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="
+ http://www.springframework.org/schema/"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ 
+ <bean name="emp1" class="com.springcore.collection.Emp">
+ <property name="names" value="Raushan"/>
+ 
+ <property name="phones">
+ <list>
+ <value>7726996566</value>
+ <value>8051929699</value>
+ <value>9821760758</value>
+ <null/>
+ </list>
+ 
+ <!-- if you have only one value then no need to put list tag  directly put value tag
+      for empty list <list> </list> dont put anything
+ -->
+ 
+ 
+ 
+ </property>
+ 
+ <property name="addresses">
+ <set>
+ <value>Delhi</value>
+ <value>Gurgaon</value>
+ <value>Jaipur</value>
+ </set>
+ 
+ </property>
+ 
+ <property name="courses">
+ <map>
+ <entry key="Java" value="2 months"/>
+ <entry key="Pyhton" value="1.2 months"/>
+ 
+ </map>
+ 
+ </property>
+ 
+ 
+ 
+ </bean>
+ 
+ 
+	
+
+</beans>

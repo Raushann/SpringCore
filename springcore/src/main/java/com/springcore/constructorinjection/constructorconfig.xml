@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="
+ http://www.springframework.org/schema/"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+<!-- using c schema -->
+<bean class="com.springcore.constructorinjection.Certi" name="certi" c:name="I Love Java Programming"/>
+
+<!--  
+	<bean class="com.springcore.constructorinjection.Certi" name="certi">
+		<constructor-arg value="Android Using Kotlin" />
+	</bean>
+	
+	-->
+
+
+	<bean class="com.springcore.constructorinjection.Person"
+		name="person">
+		<constructor-arg value="Raushan" />
+		<constructor-arg value="123" />
+		<constructor-arg ref="certi" />
+
+
+		<!-- if you want to proivide type of arg the type="int" it is also used 
+			to resolve the ambiguity. -->
+
+
+
+
+	</bean>
+	
+	
+	<bean class="com.springcore.constructorinjection.Addition" name="add">
+     <constructor-arg value="12" type="int" index="1"/>	
+     <constructor-arg value="13" type="int" index="0"/>	
+     
+	
+	</bean>
+
+
+</beans>
